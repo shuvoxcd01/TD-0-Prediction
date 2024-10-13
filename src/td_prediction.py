@@ -1,13 +1,15 @@
 from collections import defaultdict
 import gymnasium as gym
 
+from src.policies.base_policy import BasePolicy
+
 
 class TD0Prediction:
     """
     Tabular TD(0) for estimating V_pi.
     Input: policy to be evaluated. The policy is supposed to be a function whose input is observation and output is action.
     """
-    def __init__(self,  env:gym.Env, policy, alpha=0.1, gamma=0.9) -> None:
+    def __init__(self,  env:gym.Env, policy:BasePolicy, alpha=0.1, gamma=0.9) -> None:
         self.alpha = alpha
         self.V = defaultdict(int)
         self.env = env
@@ -20,7 +22,7 @@ class TD0Prediction:
             done = False
             
             while not done:
-                action = self.policy(obs)
+                action = self.policy.get_action(obs)
                 next_obs, reward, done, _, _ = self.env.step(action)
                 self.V[obs] = self.V[obs] + self.alpha *(reward + self.gamma * self.V[next_obs] -  self.V[obs])
                 obs = next_obs
