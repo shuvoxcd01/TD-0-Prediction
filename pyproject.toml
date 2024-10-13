@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "td-0-prediction"
+version = "0.0.1"
+description = "Tabular based TD(0) Prediction algorithm."
+authors = ["Falguni Das Shuvo"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+gymnasium = "0.29.1"
+matplotlib = "3.7.5"
+random-walk-env = "0.0.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
