@@ -1,7 +1,8 @@
 from collections import defaultdict
 import gymnasium as gym
 
-from src.policies.base_policy import BasePolicy
+from td_0_prediction.policies.base_policy import BasePolicy
+
 
 
 class TD0Prediction:
