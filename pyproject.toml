@@ -1,18 +1,17 @@
-[tool.poetry]
-name = "td-0-prediction"
-version = "0.0.1"
-description = "Tabular based TD(0) Prediction algorithm."
-authors = ["Falguni Das Shuvo"]
-license = "MIT"
-readme = "README.md"
-packages = [{ include = "*", from = "src" }]
-
-[tool.poetry.dependencies]
-python = "^3.8"
-gymnasium = "0.29.1"
-random-walk-env = "0.0.4"
-matplotlib = "3.7.5"
-
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TD-0-Prediction"
+version = "0.0.2"
+dependencies = ["gymnasium==0.29.1", "matplotlib==3.7.5", "random_walk_env==0.0.4"]
+requires-python = ">= 3.8"
+authors=[{name="Falguni Das Shuvo"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["Temporal Difference", "TD 0", "Reinforcement Learning"]
+
+[project.urls]
+Repository = "https://github.com/shuvoxcd01/TD-0-Prediction.git"
+

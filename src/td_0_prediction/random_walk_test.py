@@ -1,9 +1,9 @@
 import random_walk_env
 import gymnasium as gym
 
-from src.plotter import plot_state_values
-from src.policies.random_policy import RandomPolicy
-from src.td_prediction import TD0Prediction
+from td_0_prediction.utils.plotter import plot_state_values
+from td_0_prediction.core.td_0_prediction import TD0Prediction
+from td_0_prediction.policies.random_policy import RandomPolicy
 
 env = gym.make("random_walk_env/RandomWalk-v0")
 policy = RandomPolicy(num_actions=env.action_space.n)

@@ -1,7 +1,7 @@
 import random
 from typing import Optional
-from policies.base_policy import BasePolicy
 from gymnasium.spaces.space import Space
+from td_0_prediction.policies.base_policy import BasePolicy
 
 
 class RandomPolicy(BasePolicy):
